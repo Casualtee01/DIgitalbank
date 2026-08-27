@@ -12,3 +12,7 @@ up:
 
 down:
     {{DOCKER_CMD}} down
+
+
+run:
+    node --watch-path=src src/server.js

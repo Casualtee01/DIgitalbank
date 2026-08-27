@@ -13,9 +13,19 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/Casualtee01/DIgitalbank/issues"
   },
-  "homepage": "https://github.com/Casualtee01/DIgitalbank#readme"
+  "homepage": "https://github.com/Casualtee01/DIgitalbank#readme",
+  "dependencies": {
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "pg": "^8.23.0",
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^1.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^7.0.2"
+  }
 }
