@@ -1,8 +1,7 @@
 import { DataSource } from "typeorm";
-import { Account } from "../entities/account.entity.js";
-import { Kyc } from "../entities/kyc.entity.js";
-import { Customer } from "../entities/customer.entity.js";
-import { Transaction } from "../entities/transaction.entity.js";
+import path from "node:path";
+
+const currentDir = import.meta.dirname;
 
 const databaseUser = process.env.DATABASE_USER;
 const databasePassword = process.env.DATABASE_PASSWORD;
@@ -17,9 +16,7 @@ export const AppDataSource = new DataSource({
   username: databaseUser,
   password: databasePassword,
   database: databaseName,
-  // synchronize: true,
   logging: true,
-  entities: [Account, Kyc, Customer, Transaction],
-  subscribers: [],
-  migrations: [],
+  entities: [path.join(currentDir, "../entities/**/*{.js}")],
+  migrations: [path.join(currentDir, "../../migration/**/*{.js}")],
 });

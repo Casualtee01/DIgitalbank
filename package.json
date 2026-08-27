@@ -4,7 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "typeorm": "typeorm-ts-node-commonjs",
+    "migration:create": "typeorm migration:create ./src/migrations/Migration",
+    "migration:generate": "typeorm migration:generate ./src/migrations/Migration -d ./src/config/typeorm.config.js",
+    "migration:run": "typeorm migration:run -d ./src/config/typeorm.config.js",
+    "migration:revert": "typeorm migration:revert -d ./src/config/typeorm.config.js"
   },
   "repository": {
     "type": "git",

@@ -1,18 +1,20 @@
 
 
 set dotenv-required := false
-set dotenv-load := true
+set dotenv-load
 set dotenv-path := ".env"
-set export := true
+set export
 
 DOCKER_CMD := "docker compose -f docker-compose.yaml"
 
 up:
-    {{DOCKER_CMD}} up -d
+    {{ DOCKER_CMD }} up -d
 
 down:
-    {{DOCKER_CMD}} down
-
+    {{ DOCKER_CMD }} down
 
 run:
     node --watch-path=src src/server.js
+
+migrate name:
+    npx typeorm migration:create migration/{{ name }} --outputJs
