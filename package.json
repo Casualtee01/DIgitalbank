@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "typeorm": "typeorm-ts-node-commonjs",
-    "migration:create": "typeorm migration:create ./src/migrations/Migration",
+    "migration:create": "typeorm migration:create ./migration/Migration",
     "migration:generate": "typeorm migration:generate ./src/migrations/Migration -d ./src/config/typeorm.config.js",
     "migration:run": "typeorm migration:run -d ./src/config/typeorm.config.js",
     "migration:revert": "typeorm migration:revert -d ./src/config/typeorm.config.js"

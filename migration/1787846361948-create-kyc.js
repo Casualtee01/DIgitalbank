@@ -3,7 +3,7 @@
  * @typedef {import('typeorm').QueryRunner} QueryRunner
  */
 
-import { Table, TableForeignKey } from "typeorm";
+import { Table } from "typeorm";
 
 /**
  * @class
@@ -47,15 +47,6 @@ export default class CreateKyc1787846361948 {
             default: "now()",
           },
         ],
-      }),
-    );
-
-    await queryRunner.createForeignKey(
-      "kyc",
-      new TableForeignKey({
-        columnNames: ["customerIdentifier"],
-        referencedTableName: "customer",
-        referencedColumnNames: ["identifier"],
       }),
     );
   }

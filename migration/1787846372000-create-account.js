@@ -9,7 +9,7 @@ import { Table, TableForeignKey } from "typeorm";
  * @class
  * @implements {MigrationInterface}
  */
-export default class CreateAccount1787846337294 {
+export default class CreateAccount1787846372000 {
   /**
    * @param {QueryRunner} queryRunner
    */
